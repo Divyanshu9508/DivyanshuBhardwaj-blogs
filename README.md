@@ -1,1 +1,339 @@
-# DivyanshuBhardwaj-blogs
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshu Bhardwaj - Official Blog</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #f8fafc; /* slate-50 */
+        }
+
+        /* Styling for the floating videos container */
+        .floating-videos-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        /* Individual floating video styles */
+        .floating-video {
+            position: absolute;
+            opacity: 0.15;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: float 25s infinite linear;
+        }
+
+        /* Staggering animations for a more random effect */
+        .floating-video:nth-child(1) {
+            width: 15%;
+            top: 10%;
+            left: 5%;
+            animation-duration: 30s;
+        }
+        .floating-video:nth-child(2) {
+            width: 20%;
+            top: 20%;
+            left: 80%;
+            animation-duration: 25s;
+            animation-delay: -10s;
+        }
+        .floating-video:nth-child(3) {
+            width: 10%;
+            top: 70%;
+            left: 15%;
+            animation-duration: 35s;
+            animation-delay: -5s;
+        }
+        .floating-video:nth-child(4) {
+            width: 18%;
+            top: 60%;
+            left: 60%;
+            animation-duration: 28s;
+            animation-delay: -15s;
+        }
+         .floating-video:nth-child(5) {
+            width: 12%;
+            top: 40%;
+            left: 30%;
+            animation-duration: 32s;
+            animation-delay: -20s;
+        }
+
+        /* Keyframe animation for the floating effect */
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+        
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold gradient-text">Divyanshu Bhardwaj</a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-300 hover:text-sky-400 transition-colors">Home</a>
+                    <a href="#about" class="text-slate-300 hover:text-sky-400 transition-colors">About</a>
+                    <a href="#blog" class="text-slate-300 hover:text-sky-400 transition-colors">Blog</a>
+                    <a href="#videos" class="text-slate-300 hover:text-sky-400 transition-colors">Videos</a>
+                    <a href="#contact" class="text-slate-300 hover:text-sky-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Social Icon -->
+                <a href="https://www.instagram.com/divyanshu_bhardwaj" target="_blank" class="hidden md:block text-slate-300 hover:text-sky-400 transition-colors">
+                    <i data-feather="instagram"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-slate-300">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-slate-300 hover:text-sky-400">Home</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400">About</a>
+            <a href="#blog" class="block py-2 text-slate-300 hover:text-sky-400">Blog</a>
+            <a href="#videos" class="block py-2 text-slate-300 hover:text-sky-400">Videos</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-sky-400">Contact</a>
+            <a href="https://www.instagram.com/divyanshu_bhardwaj" target="_blank" class="flex items-center gap-2 pt-4 text-slate-300 hover:text-sky-400">
+                <i data-feather="instagram" class="w-5 h-5"></i>
+                Instagram
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+            <!-- Floating Videos Background -->
+            <div class="floating-videos-container">
+                <!-- Replace with your actual video URLs -->
+                <video class="floating-video" src="https://placehold.co/1920x1080.mp4?text=Video+1" autoplay loop muted playsinline></video>
+                <video class="floating-video" src="https://placehold.co/1920x1080.mp4?text=Video+2" autoplay loop muted playsinline></video>
+                <video class="floating-video" src="https://placehold.co/1920x1080.mp4?text=Video+3" autoplay loop muted playsinline></video>
+                <video class="floating-video" src="https://placehold.co/1920x1080.mp4?text=Video+4" autoplay loop muted playsinline></video>
+                <video class="floating-video" src="https://placehold.co/1920x1080.mp4?text=Video+5" autoplay loop muted playsinline></video>
+            </div>
+            
+            <div class="relative z-10 p-6">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Stories Through My Lens</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-300 mb-8">Welcome to the official blog of Divyanshu Bhardwaj. Discover travel stories, creative insights, and visual journeys.</p>
+                <a href="#blog" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">Explore The Blog</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-slate-800/50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x600/1e293b/f8fafc?text=Divyanshu" alt="Divyanshu Bhardwaj" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                        <p class="text-slate-300 mb-4 leading-relaxed">
+                            I'm Divyanshu Bhardwaj, a storyteller, creator, and adventurer based in Lakhisarai, Bihar. My passion is to capture the beauty of the world, whether it's through a camera lens, a drone shot, or the written word. This blog is my canvas to share experiences that inspire and connect.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed">
+                            From the bustling streets of local markets to the serene landscapes of distant mountains, I believe every moment has a story to tell. Join me as I explore, create, and share my journey with you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Latest From The Blog</h2>
+                    <p class="text-slate-400">My recent adventures, thoughts, and discoveries.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <img src="https://placehold.co/600x400/334155/e2e8f0?text=Travel" alt="Blog Post Image" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sky-400 text-sm font-medium">Travel</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3">A Journey Through The Unseen Valleys</h3>
+                            <p class="text-slate-400 text-sm mb-4">Discovering the hidden gems of the mountains and the stories they hold within their majestic peaks.</p>
+                            <a href="#" class="font-semibold text-sky-400 group-hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <img src="https://placehold.co/600x400/334155/e2e8f0?text=Creative" alt="Blog Post Image" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sky-400 text-sm font-medium">Creativity</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3">Finding Inspiration in Daily Life</h3>
+                            <p class="text-slate-400 text-sm mb-4">How to turn mundane moments into creative masterpieces. A guide for aspiring artists and creators.</p>
+                            <a href="#" class="font-semibold text-sky-400 group-hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <img src="https://placehold.co/600x400/334155/e2e8f0?text=Tech" alt="Blog Post Image" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sky-400 text-sm font-medium">Tech</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3">My Essential Videography Gear for 2025</h3>
+                            <p class="text-slate-400 text-sm mb-4">A deep dive into the cameras, drones, and accessories that I never leave home without.</p>
+                            <a href="#" class="font-semibold text-sky-400 group-hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="py-20 md:py-32 bg-slate-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Featured Videos</h2>
+                    <p class="text-slate-400">A collection of my favorite visual stories.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Video 1 -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden group shadow-lg">
+                        <div class="relative aspect-video">
+                            <img src="https://placehold.co/800x450/1e293b/f8fafc?text=Video+Thumbnail" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <button class="w-20 h-20 bg-sky-500/80 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                                    <i data-feather="play" class="w-8 h-8 text-white ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold p-4">City Lights: A Neon Dream</h3>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="bg-slate-800 rounded-2xl overflow-hidden group shadow-lg">
+                        <div class="relative aspect-video">
+                            <img src="https://placehold.co/800x450/1e293b/f8fafc?text=Video+Thumbnail" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <button class="w-20 h-20 bg-sky-500/80 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                                    <i data-feather="play" class="w-8 h-8 text-white ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold p-4">Echoes of the Forest</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-slate-400 mb-8">Have a question, a project idea, or just want to say hello? I'd love to hear from you.</p>
+                <form action="#" method="POST" class="space-y-6 text-left">
+                    <div>
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 text-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                     <div>
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 text-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                     <div>
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Your Message" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 text-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800/50 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <p class="text-slate-400 text-sm mb-4 md:mb-0">&copy; 2025 Divyanshu Bhardwaj. All Rights Reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="https://www.instagram.com/divyanshu_bhardwaj" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors">
+                        <i data-feather="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors">
+                        <i data-feather="youtube" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors">
+                        <i data-feather="twitter" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Feather Icons initialization
+        feather.replace();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
